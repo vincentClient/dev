@@ -1,0 +1,50 @@
+html
+    head
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title= title
+        link(href=href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet')
+        style
+            include includes/css/weather.css
+        
+    body
+        h1(class='weather-id') Weather ID:
+        p(class='id')= output
+
+        h3(class='time')
+        h3(class='date')
+
+        h3(class='city')= city
+        h3(class='state')= state
+        h3(class='zipcode')= zip
+        
+        img(src='https://cdn.dribbble.com/users/62213/screenshots/3833462/icons.gif' class='form-img-background')
+        a(href='https://discord.gg/aDeXJVn' target='_blank')
+            img(src='https://vignette.wikia.nocookie.net/aura-kingdom/images/1/18/Discord_icon.png/revision/latest?cb=20170108193813' class='discord-icon' class='sc')
+        a(href='https://www.instagram.com/fak0.l/' target='_blank')    
+            img(src='https://vignette.wikia.nocookie.net/nerve/images/3/37/Instagram_Icon.png/revision/latest?cb=20170213211603' class='instagram-icon' class='sc')
+        a(href='https://twitter.com/retardVincent' target='_blank')
+            img(src='https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png' class='twitter-icon' class='sc')
+        
+        div(class='weather-selector')
+            p= description
+        
+        div(class='form-section')
+            form(action='/weather' method='POST' class='form')
+                input(name='city' type='text' class='form-input' onfocusout='onfocusout()' onfocus='onfocus()' spellcheck='false' required autofocus)
+                
+        h3(class='temperature')= temp
+        h3(class='humidity')= humidity
+
+        div(class='snowflake') ❄
+        div(class='snowflake') ❅
+        div(class='snowflake') ❆
+        div(class='snowflake') ❄
+        div(class='snowflake') ❅
+        div(class='snowflake') ❆
+        div(class='snowflake') ❄
+        div(class='snowflake') ❅
+        div(class='snowflake') ❆
+        div(class='snowflake') ❄
+    
+        script
+            include includes/js/weather.js

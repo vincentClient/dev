@@ -1,0 +1,37 @@
+html
+    head
+        link(href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css')
+        style
+            include includes/css/fortnite.css
+    body
+        p(class='RunBefore') Press <em> Windows Key + R</em> & paste this chrome.exe --user-data-dir='C:/Chrome dev session' --disable-web-security
+        div(id='container')
+            output
+            img(align='left' src='http://www.w3.org/html/logo/downloads/HTML5_Badge_128.png' width='100' height='100' style='padding: 0px 10px 20px 0px')
+            h2(style='letter-spacing: 4px') HTML5 Web Terminal
+            p Tue Jul 17 2018 20:59:13 GMT-0500 (Central Daylight Time)
+            p Enter a &quot;name&quot; to view player statistics.
+            p(id='username')=username
+            //- p(id='platform')=platform
+            div(id='input-line' class='input-line')
+                div(class='prompt') [madebyhttpx0r@html]$ ~
+                div
+                    form(action='/fortnite' method='POST')
+                        input(name='name' type='text' class='cmdline' autofocus spellcheck='false' autocomplete='off')
+                        //- select(id='dropdown' onchange='myFunction()' name='select')
+                        //-     option(value='pc') pc
+                        //-     option(value='xbox') xbox
+                        //-     option(value='ps4') ps4       
+        pre(id='output')
+        
+        //- img(src='https://i.redd.it/tcj8tsfkyyq01.png' class='Banner')
+
+        script
+            include includes/js/fortnite.js
+        script(src='https://s.codepen.io/AndrewBarfield/pen/LEbPJx.js')
+        script.
+            function myFunction() {
+            var x = document.getElementById('dropdown').value;
+            document.getElementById("platform").innerHTML = x;
+            }
+
